@@ -35,8 +35,45 @@ The system operates on virtual network environments created using **GNS3**, enab
 - GNS3 (local or cloud-based server)
 - Network devices in GNS3 with Telnet enabled
 
-### Python Dependencies
-Install required Python packages using:
+### ⚙️ GNS3 Configuration
+
+Preferred Setup (Recommended)
+It is recommended to use your own GNS3 architecture, especially for custom topologies or advanced testing.
+If you are using a cloud-based or remote GNS3 server, update the following variable in the main script:
+GNS3_SERVER = "http://<your-gns3-server>"
+Replace <your-gns3-server> with the IP address or hostname of your GNS3 server.
+GNS3 may also run on local server; if using localserver then GNS_SERVER is already set to search local server
+
+Default / Basic Architecture
+
+For convenience, a basic GNS3 topology is already provided within the project but first the project should be loaded into localserver using GNS3.
+This default setup can be used for:
+
+Initial testing
+Dmonstrations
+Understanding the project workflow
+Users may modify or replace this architecture as needed.
+
+## 📊 Topology Graph Representation
+
+The project constructs a graph model of the GNS3 topology, where:
+Nodes represent network devices
+Edges represent links between devices
+This graph is used to:
+
+Analyze end-to-end paths
+Identify failure points
+Visualize how errors propagate through the network
+
+## ▶️ Usage
+
+Start your GNS3 server
+Ensure devices are reachable via Telnet
+Configure the GNS3_SERVER variable if using a remote server
+Run the main script:
+
+python main.py
+
 
 ```bash
 pip install -r requirements.txt
