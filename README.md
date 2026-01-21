@@ -75,5 +75,7 @@ Run the main script:
 python main.py
 
 
-```bash
+### Python Dependencies
+Install required Python packages using:
+
 pip install -r requirements.txt
